@@ -1,0 +1,19 @@
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt.scrollBar: false
+URxvt.cursorColor: magenta
+
+URxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+
+!URxvt.font: xft:NanumGothic:size=12
+!URxvt.font: xft:NanumBarunGothic:size=12
+URxvt.font: xft:NanumMyeongjoBold:size=12
+!URxvt.font: xft:monospace:size=12
+URxvt.letterSpace: 0
+
+URxvt.keysym.Control-minus: resize-font:smaller
+URxvt.keysym.Control-plus: resize-font:bigger
+URxvt.keysym.Control-equal: resize-font:reset
+URxvt.keysym.Control-question: resize-font:show
+
