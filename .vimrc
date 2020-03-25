@@ -75,7 +75,6 @@ colorscheme wal
 set ignorecase
 set showcmd
 set pastetoggle=<F2>
-
 set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz
 
 set noimd
@@ -85,15 +84,11 @@ set ims=-1
 
 
 
-
-
 " tiddlywiki things
 au BufRead,BufNewFile *.tid set filetype=tid
 au! Syntax tid source ~/.vim/syntax/tid.vim
 syntax on
 " tiddlywiki
-
-
   
 " Problem Solving 
 autocmd BufNewFile */ProblemSolving/*.cpp 0r ~/.vim/templates/problem_solving.cpp
@@ -104,6 +99,7 @@ autocmd Filetype cpp inoremap ;forin for (int i = 0; i < n; i++)
 autocmd Filetype cpp inoremap ;foriN for (int i = 0; i < N; i++)
 autocmd Filetype cpp inoremap ;forjn for (int j = 0; j < n; j++)
 autocmd Filetype cpp inoremap ;forjN for (int j = 0; j < N; j++)
+"
 
 " My notetaking 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
