@@ -7,12 +7,9 @@
 # g++ setting
 alias g++='g++ -I /usr/local/inlcude'
 
-
 # Shortcuts to Directories
 alias CI='cd ~/notes/GIST/CILAB'
 alias CV='cd ~/notes/GIST/2019_fall/CV'
-
-
 
 # Shortcuts to Commands
 alias copy='xclip -selection c'
@@ -39,10 +36,16 @@ alias mhv='xrandr --output DP2 --rotate left'
 alias mhh='xrandr --output DP2 --rotate normal'
 
 
+alias nautilus='touch /tmp/whereami && nautilus `cat /tmp/whereami`'
+
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/\* //' -e 's/\(.*\)/(\1)/'
+}
 
-PS1='[\u@\h \W]\$ '
+#PS1="[\u@\h \[\e[32m\]\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+PS1="\u \[\e[32m\]\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
