@@ -89,12 +89,14 @@ au BufRead,BufNewFile *.tid set filetype=tid
 au! Syntax tid source ~/.vim/syntax/tid.vim
 syntax on
 " tiddlywiki
+" k
+nnoremap ;cp :!cat "%" \| xclip -selection c<cr><cr>
   
 " Problem Solving 
 autocmd BufNewFile */ProblemSolving/*.cpp 0r ~/.vim/templates/problem_solving.cpp
 autocmd Filetype cpp nnoremap ;test :!g++ -g "%" && time ./a.out < input.txt<cr>
+autocmd Filetype cpp nnoremap ;tt :!g++ -g "%" && time ./a.out<cr>
 autocmd Filetype cpp nnoremap ;db :!g++ -g "%" && gdb ./a.out<cr>
-autocmd Filetype cpp nnoremap ;cp :!cat "%" \| xclip -selection c<cr><cr>
 autocmd Filetype cpp inoremap ;forin for (int i = 0; i < n; i++)
 autocmd Filetype cpp inoremap ;foriN for (int i = 0; i < N; i++)
 autocmd Filetype cpp inoremap ;forjn for (int j = 0; j < n; j++)
