@@ -24,6 +24,8 @@ alias tf='source ~/envs/tensorflow/bin/activate'
 alias pg='ps -ef | grep'
 alias hg='history | grep'
 alias g='git'
+alias gc='git checkout'
+alias gb='git branch'
 alias d='docker'
 alias di='docker image'
 alias dc='docker container'
@@ -76,6 +78,8 @@ mkcdir ()
 export PROMPT_COMMAND="pwd > /tmp/whereami"
 
 export PATH=$PATH:/home/park/repos/scripts/
+
+HISTIGNORE='l:ls:cd *:cd:history:hg *'
 
 
 if [[ -f /tmp/whereami ]]; then
