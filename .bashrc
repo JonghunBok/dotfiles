@@ -14,6 +14,8 @@ alias CV='cd ~/notes/GIST/2019_fall/CV'
 # Shortcuts to Commands
 alias copy='xclip -selection c'
 alias c='cd'
+alias pd='pushd'
+alias ppd='pushd'
 alias r='ranger'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias l='ls'
@@ -29,6 +31,7 @@ alias gb='git branch'
 alias d='docker'
 alias di='docker image'
 alias dc='docker container'
+alias da='docker attach'
 
 alias t='task'
 
